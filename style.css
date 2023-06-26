@@ -98,6 +98,10 @@ header nav img {
     margin-top: -13px;
 }
 
+.menu {
+    display: block;
+}
+
 header nav ul{
     margin-left: auto;
     padding: 0;
@@ -110,6 +114,10 @@ header nav ul{
 header nav ul li {
     font-size: 18px;
     font-weight: 400;
+}
+
+.menu-icon {
+    display: none;
 }
 
 header section {
@@ -356,3 +364,74 @@ footer nav {
 }
 
 /* ANIMATIONS END */
+
+/* Styles for mobile phones */
+
+@media (max-width:800px){
+
+    .menu {
+        display: none;
+        z-index: 1;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+    
+    .menu-icon img {
+        width: 45px;
+        height: 45px;
+        margin-top: -10px;
+    }
+
+    .menu-active {
+        display: flex;
+        
+        width: 16vh;
+        height: 16vh;
+
+        margin-top: 35px;
+        margin-right: -105px;
+        background-color: #94a1b263;
+    }
+
+    .menu-active ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-right: 25%;
+        text-align: center;
+        
+    }
+
+    .main-box {
+        margin: 40px;
+    }
+
+    .main-box p {
+        line-height: 2;
+    }
+
+    .vector-image img {
+        width: 350px;
+    }
+
+    .projects img {
+        margin-left: -100px ;
+    }
+
+    footer nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        margin: 0 0 0 0;
+        
+    }
+
+    .footer-box {
+        display: flex;
+        justify-content: center;
+        margin-right: 38%;
+    }
+}

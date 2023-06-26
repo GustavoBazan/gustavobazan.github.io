@@ -13,12 +13,18 @@
         <header>
             <nav>
                 <a href="https://github.com/GustavoBazan"><img src="./images/icon-github.png"></a>
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="menu-icon">
+                    <img src="./images/icon-menu.png">
+                </div>
             </nav>
             <section id="inicio">
                 <div class="main-box fade-in">
@@ -137,6 +143,15 @@
         }
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('load', handleScroll);
+
+        (function(){
+        const menuIcon = document.querySelector('.menu-icon');
+        const menu = document.querySelector('.menu');
+
+        menuIcon.addEventListener('click', ()=>{
+            menu.classList.toggle('menu-active');
+        });
+    })();
     </script>
 </body>
 </html>
