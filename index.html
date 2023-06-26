@@ -148,6 +148,12 @@
             }
             window.addEventListener('scroll', handleScroll);
             window.addEventListener('load', handleScroll);
+        } else {
+            var fadeElements = document.querySelectorAll('.fade-in');
+
+            fadeElements.forEach(function(element) {
+                element.classList.add('visible');
+            });
         }
 
         (function(){
