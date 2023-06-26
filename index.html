@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo Bazan</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="https://github.com/GustavoBazan"><img src="./images/icon-github.png"></a>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <section id="inicio">
+                <div class="main-box fade-in">
+                    <h1>Boa Noite!</h1>
+                    <p>Aqui você poderá encontrar alguns de meus projetos.</p>
+                    <a href="#sobre">Vamos lá!</a>
+                </div>
+            </section>
+        </header>
+        <main>
+            <section class="about fade-in" id="sobre">
+                <h2>Minhas Habilidades</h2>
+                <p>Minha paixão é criar. Desde a elaboração da idéia até a sua concepção.</p>
+    
+                <div class="about-articles">
+                    <article>
+                        <img src="./images/icon-design.png">
+                        <h3>Design</h3>
+                        <p>Transformar ideias em arte, considerando sua forma e função.</p>
+                    </article>
+    
+                    <article>
+                        <img src="./images/icon-code.png">
+                        <h3>Programação</h3>
+                        <p>A programação é a arte de criar, transformando linhas de código em inovação.</p>
+                    </article>
+    
+                    <article>
+                        <img src="./images/icon-creativity.png">
+                        <h3>Criatividade</h3>
+                        <p>Afinal, esse é o principal elemento para qualquer criação, certo?</p>
+                    </article>
+                </div>
+            </section>
+            <div class="vector-image fade-in">
+                <img src="./images/programming.svg">
+            </div>
+            <section class="projects" id="projetos">
+                <div class="fade-in">
+                    <h2>Projetos em que estou trabalhando</h2>
+                    <p>Atualmente estou trabalhando no desenvolvimento do aplicativo ReskyVR.</p>
+                    <a href="https://reskyvr.com.br"><img src="./images/reskyvr.png"></a>
+                </div>
+            </section>
+            <div class="vector-image fade-in">
+                <img src="./images/developer.svg">
+            </div>
+            <section class="contact" id="contato">
+                <div class="fade-in">
+                    <h2>Quer entrar em contato comigo?</h2>
+                    <p>Sinta-se à vontade para utilizar qualquer um dos meios abaixo.</p>
+                </div>
+                <div class="contact-articles fade-in">
+                    <article>
+                        <img src="./images/icon-email.png">
+                        <h3>Email</h3>
+                        <p>gustavo.bazan1205@gmail.com</p>
+                    </article>
+    
+                    <article>
+                        <img src="./images/icon-linkedin.png">
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/gustavo-de-almeida-bazan">https://www.linkedin.com/in/gustavo-de-almeida-bazan</a>
+                    </article>
+    
+                    <article>
+                        <img src="./images/icon-instagram.png">
+                        <h3>Instagram</h3>
+                        <p>@gusta_bazan</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="#sobre">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="#projetos">Projetos</a>
+                        </li>
+                        <li>
+                            <a href="#contato">Contato</a>
+                        </li> 
+                    </ul>
+                </nav>
+            </section>
+            <section class="footer-box">
+                <h3>GitHub &copy; Gustavo de Almeida Bazan</h3>
+            </section>
+        </footer>
+    </div>
+    <script>
+        function isInViewport(element) {
+            var rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+        function handleScroll() {
+            var fadeElements = document.querySelectorAll('.fade-in');
+
+            fadeElements.forEach(function(element) {
+                if (isInViewport(element) || element.classList.contains('visible')) {
+                element.classList.add('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+    </script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root {
+    --padding-nav: 60px;
+    --color-background: #16161a;
+    --color-background-card: #242629;
+    --color-white: #fffffe;
+    --color-button: #7f5af0;
+    --color-highlight: #7f5af0;
+    --color-button-highlight: #9171f1;
+    --color-tertiary: #2cb67d;
+    --color-paragraph: #94a1b2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* SCROLLBAR */
+
+body::-webkit-scrollbar {
+    width: 12px;               
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(230, 230, 230);        
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-button);    
+    border-radius: 5px;      
+    border: 3px solid rgb(230, 230, 230);  
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-button-highlight);    
+    border-radius: 5px;      
+    border: 3px solid rgb(230, 230, 230);
+}
+
+/* SCROLLBAR END */
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--color-background);
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: var(--color-white);
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, rgba(2, 5, 32, 0.2) 60%, var(--color-background) 100%), url('./images/background.jpg');
+    background-size: cover;
+    z-index: -1;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+header a:hover {
+    color: var(--color-highlight);
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 0 5% 0 5%;
+    padding: var(--padding-nav);
+}
+
+header nav img {
+    width: 50px;
+    height: 50px;
+    margin-top: -13px;
+}
+
+header nav ul{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 1em;
+}
+
+header nav ul li {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+header section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--padding-nav);
+}
+
+.main-box {
+    width: fit-content;
+    height: fit-content;
+    padding: 40px 50px 40px 50px;
+    background-color: #c9c9d652;
+    margin-bottom: var(--padding-nav);
+
+    text-align: center;
+    line-height: 48px;
+    border-radius: 12px;
+}
+
+.main-box h1 {
+    font-size: 56px;
+    font-weight: 500;
+}
+
+.main-box p {
+    font-size: 18px;
+}
+
+.main-box a {
+    display: inline-block;
+    background-color: var(--color-button);
+    justify-self: center;
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 3px 30px;
+    border-radius: 18px;
+}
+
+.main-box a:hover {
+    color: var(--color-white);
+    background-color: var(--color-button-highlight);
+}
+
+/* SOBRE */
+
+.about {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.about h2 {
+    color: var(--color-white);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about p {
+    line-height: 1.7;
+    color: var(--color-paragraph);
+}
+
+.about-articles {
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+
+.about-articles article {
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.about-articles img {
+    width: 40px;
+}
+
+.about-articles h3 {
+    color: var(--color-tertiary);
+    font-size: 32;
+    font-weight: 500;
+}
+
+/* SOBRE END */
+
+.vector-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.vector-image img {
+    height: 400px;
+}
+
+/* PROJETOS */
+
+.projects {
+    background-color: var(--color-background-card);
+    margin-top: 40px;
+    padding: 40px 0 40px 0;
+    text-align: center;
+}
+
+.projects h2 {
+    color: var(--color-white);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.projects p {
+    line-height: 2;
+    color: var(--color-paragraph);
+}
+
+.projects img {
+    height: 350px;
+}
+
+/* PROJETOS END */
+
+/* CONTATO */
+
+.contact {
+    margin-top: 40px;
+    padding: 40px 0 40px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    color: var(--color-white);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.contact p {
+    line-height: 2;
+    color: var(--color-paragraph);
+}
+
+.contact-articles {
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+
+.contact-articles article {
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.contact-articles img {
+    width: 40px;
+}
+
+.contact-articles h3 {
+    color: var(--color-tertiary);
+    font-size: 32;
+    font-weight: 500;
+}
+
+/* CONTATO END */
+
+/* FOOTER */
+
+footer {
+    background-color: var(--color-background-card);
+    width: 100%;
+    color: var(--color-white);
+    padding: var(--padding-nav);
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+}
+
+footer ul li {
+    margin-right: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    color: var(--color-white);
+}
+
+footer a:hover {
+    color: var(--color-highlight);
+}
+
+
+footer nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 0 5% 0 5%;
+    
+}
+
+.footer-box {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-box h3 {
+    margin-top: 10px;
+}
+
+/* FOOTER END */
+
+
+/* ANIMATIONS */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transition-delay: 0.3s; /* Optional: Add a delay before the fade-in effect starts */
+}
+
+/* ANIMATIONS END */
