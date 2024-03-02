@@ -3,14 +3,14 @@ const projects = [
     name: 'Realidade Virtual',
     description: 'ReskyVR',
     imageSrc: './images/reskyvr.png',
-    imageAlt: 'ReskyVR App',
+    imageAlt: 'ReskyVR',
     href: 'http://reskyvr.com.br/',
   },
   {
     name: 'Consulta de CEP',
     description: 'ConsultaCEP',
     imageSrc: './images/appConsultaCEP.png',
-    imageAlt: 'ConsultaCEP App',
+    imageAlt: 'ConsultaCEP',
     href: 'https://github.com/GustavoBazan/appConsultaCEP',
   },
   {
