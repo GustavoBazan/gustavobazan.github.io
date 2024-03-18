@@ -29,7 +29,7 @@ const router = createBrowserRouter([
 */
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <BrowserRouter>
+  <BrowserRouter basename={import.meta.env.DEV ? '/' : '/'}>
 
     <div className='flex flex-col w-screen min-h-screen bg-slate-900 select-none overflow-hidden'>
 
