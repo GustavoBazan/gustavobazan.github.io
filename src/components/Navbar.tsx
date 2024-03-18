@@ -66,13 +66,13 @@ export default function Navbar() {
 
         <div id="NavBar" className={cl.container}>
             <div className="w-auto self-start h-full flex items-center ">
-                <p className=" text-slate-200 font-bold text-2xl">BAZAN</p>
+                <p className=" text-slate-200 font-bold text-2xl"><a href="/">BAZAN</a></p>
             </div>
             <div className="w-auto h-full flex flex-row items-center">
                 <ul className={cl.links}>
 
                     {
-                        links.map((link) => <li className={(activeLink === link.link && (elements.links.active)) + cl.links}><a href={'#' + link.link} onClick={() => onUpdateActiveLink(link.link)}>{(link.name)}</a></li>)
+                        links.map((link) => <li className={(activeLink === link.link && (elements.links.active)) + cl.links}><a href={'/#' + link.link} onClick={() => onUpdateActiveLink(link.link)}>{(link.name)}</a></li>)
                     }
 
                     <ProjectsLink />

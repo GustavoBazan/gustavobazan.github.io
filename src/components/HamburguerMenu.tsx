@@ -31,9 +31,9 @@ const CodeIcon = () => {
 
 
 const projects = [
-    { name: 'Início', description: 'Home', href: '#', icon: HomeIcon },
-    { name: 'Habilidades', description: 'Minhas Habilidades', href: '#about', icon: SkillsIcon },
-    { name: 'Projetos', description: "Todos os Projetos", href: '#projects', icon: CodeIcon },
+    { name: 'Início', description: 'Home', href: '/#', icon: HomeIcon },
+    { name: 'Habilidades', description: 'Minhas Habilidades', href: '/#about', icon: SkillsIcon },
+    { name: 'Projetos', description: "Todos os Projetos", href: '/#projects', icon: CodeIcon },
 ];
 
 export default function HamburguerMenu() {
