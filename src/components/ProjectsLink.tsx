@@ -45,14 +45,14 @@ const CodeIcon = () => {
 
 
 const projects = [
-    { name: 'ReskyVR', description: 'Multiplas telas em Realidade Virtual', href: '/reskyvr', icon: ComputerIcon },
+    { name: 'ReskyVR', description: 'Multiplas telas em Realidade Virtual', href: '/#/reskyvr', icon: ComputerIcon },
     { name: 'ConsultaCEP', description: 'App de Consulta a CEP', href: 'https://github.com/GustavoBazan/appConsultaCEP', icon: MapIcon },
     { name: 'Portfolio', description: "O Codigo desse Portfólio!", href: 'https://github.com/GustavoBazan/gustavobazan.github.io', icon: CodeIcon },
 ];
 
 const callsToAction = [
-    { name: 'Todos os Projetos', href: '/#projects', icon: SquaresPlusIcon },
-    { name: 'Habilidades', href: '/#about', icon: SparklesIcon },
+    { name: 'Todos os Projetos', href: '/#/#projects', icon: SquaresPlusIcon },
+    { name: 'Habilidades', href: '/#/#about', icon: SparklesIcon },
 ];
 
 export default function ProjectsLink() {

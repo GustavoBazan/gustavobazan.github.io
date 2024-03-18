@@ -72,7 +72,7 @@ export default function Navbar() {
                 <ul className={cl.links}>
 
                     {
-                        links.map((link) => <li className={(activeLink === link.link && (elements.links.active)) + cl.links}><a href={'/#' + link.link} onClick={() => onUpdateActiveLink(link.link)}>{(link.name)}</a></li>)
+                        links.map((link) => <li className={(activeLink === link.link && (elements.links.active)) + cl.links}><a href={'/#/#' + link.link} onClick={() => onUpdateActiveLink(link.link)}>{(link.name)}</a></li>)
                     }
 
                     <ProjectsLink />

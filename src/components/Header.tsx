@@ -31,7 +31,7 @@ export default function Header() {
                 <Spline scene="https://prod.spline.design/89agnwdwMdan7EHo/scene.splinecode" className='absolute hidden lg:flex right-[50%] mt-10 lg:left-[50%] items-center lg:z-30' />
 
                 <div className='absolute flex flex-col bottom-16 mb-8 lg:mb-0 lg:ml-48  mr-16 lg:mr-0 self-center'>
-                <a href="#projects" className='lg:animate-float'>
+                <a href="/#/#projects" className='lg:animate-float'>
                     <h2 className='text-slate-300 display-interface text-xl -ml-2 -mb-2'>Projects</h2>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" w-14 h-14 text-slate-300">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />

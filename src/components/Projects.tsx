@@ -4,7 +4,7 @@ const projects = [
     description: 'ReskyVR',
     imageSrc: './images/reskyvr.png',
     imageAlt: 'ReskyVR',
-    href: '/reskyvr',
+    href: '/#/reskyvr',
   },
   {
     name: 'Consulta de CEP',

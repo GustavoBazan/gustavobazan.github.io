@@ -1,11 +1,8 @@
-//import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {
-  //createBrowserRouter,
-  //RouterProvider,
-  BrowserRouter,
   Routes,
-  Route
+  Route,
+  HashRouter
 } from "react-router-dom";
 import './index.css';
 
@@ -15,21 +12,8 @@ import Footer from './components/Footer.tsx';
 import App from './pages/Main.tsx';
 import ReskyVR from './pages/ReskyVR.tsx';
 
-/*
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App/>,
-  },
-  {
-    path: "/reskyvr",
-    element: <ReskyVR/>,
-  },
-]);
-*/
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <BrowserRouter basename={import.meta.env.DEV ? '/' : '/'}>
+  <HashRouter>
 
     <div className='flex flex-col w-screen min-h-screen bg-slate-900 select-none overflow-hidden'>
 
@@ -38,11 +22,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Routes>
           <Route path='/' element={<App/>} />
           <Route path='/reskyvr' element={<ReskyVR/>} />
+          <Route path='*' element={<div> Page Not Found </div>} />
         </Routes>
 
       <Footer/>
 
     </div>
 
-  </BrowserRouter>,
+  </HashRouter>
 );
