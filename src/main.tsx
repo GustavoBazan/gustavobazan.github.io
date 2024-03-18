@@ -1,8 +1,11 @@
-import React from 'react'
+//import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {
-  createBrowserRouter,
-  RouterProvider,
+  //createBrowserRouter,
+  //RouterProvider,
+  BrowserRouter,
+  Routes,
+  Route
 } from "react-router-dom";
 import './index.css';
 
@@ -12,6 +15,7 @@ import Footer from './components/Footer.tsx';
 import App from './pages/Main.tsx';
 import ReskyVR from './pages/ReskyVR.tsx';
 
+/*
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,16 +26,23 @@ const router = createBrowserRouter([
     element: <ReskyVR/>,
   },
 ]);
+*/
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+  <BrowserRouter>
 
     <div className='flex flex-col w-screen min-h-screen bg-slate-900 select-none overflow-hidden'>
 
       <Navbar/>
-      <RouterProvider router={router} />
+
+        <Routes>
+          <Route path='/' element={<App/>} />
+          <Route path='/reskyvr' element={<ReskyVR/>} />
+        </Routes>
+
       <Footer/>
 
     </div>
-  </React.StrictMode>,
+
+  </BrowserRouter>,
 );
